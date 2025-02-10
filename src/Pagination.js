@@ -63,6 +63,7 @@ const Pagination = () => {
   useEffect(() => {
     api1();
   }, []);
+  console.log(data)
 
   return (
     <div className="pagination-container">

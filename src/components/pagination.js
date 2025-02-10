@@ -1,3 +1,5 @@
+import Card from "./Card"
+
 const Pagination1 = ({displayItems,prevDisplay,nextDisplay,array,slicedArray,count,data,itemsPerPage})=>{
 
     console.log(count)
@@ -9,16 +11,18 @@ const Pagination1 = ({displayItems,prevDisplay,nextDisplay,array,slicedArray,cou
         {slicedArray.length > 0
           ? slicedArray.map((item) => {
               return (
-                <div key={item.id} className="product-card">
-                  {item?.title}
-                </div>
+                // <div>
+                //   <img src={item.thumbnail || item.image}/>
+                // <div key={item.id} className="product-card">
+                //   {item?.title}
+                // </div>
+                // </div>
+                <Card item={item}/>
               );
             })
           : data?.map((item) => {
               return (
-                <div key={item.id} className="product-card">
-                  {item?.title}
-                </div>
+              <Card item={item}/>
               );
             })}
       </div>
